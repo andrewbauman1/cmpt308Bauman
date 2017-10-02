@@ -63,8 +63,9 @@ where discountpct in (select discountpct
                       where city in ('Duluth','London'));
                       
 -- #8 --
-/* Check constraints are used to limit the value ranges that may be placed in a column within a database. 
- * This is particularly avantaegous as it reduces the chance of entering incorrect data into a field.
+/* Check constraints allow you to define enumerations to limit the value ranges that may be entered within a database. 
+ * This is particularly avantaegous as it reduces the chance of the user entering incorrect data into a field.
+ * Additionally, they also help maintain uniformity within the database itself.
  * For example, if the user were working with something pertaining to days of the week, a check restraint 
  * could be placed only permitting days of the week to be entered into the dateField. However, a check restraint
  * does not (and should not) be used in all scenarios. For instance, one would not use a check restraint for
