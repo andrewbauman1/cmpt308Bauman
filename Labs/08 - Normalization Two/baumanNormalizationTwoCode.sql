@@ -15,7 +15,7 @@ CREATE TABLE People (
   firstName	  text not null,
   lastName	  text not null,
   address	  text,
-  birthDate	  date, -- YYYY-MM-DD
+  birthDate	  date, -- YYYY-MM-DD Consider adding zip and city columns
 );
 -- Actors --
 CREATE TABLE Actors (
@@ -55,7 +55,7 @@ CREATE TABLE Movies (
 
 -- actsIn --
 CREATE TABLE ActsIn (
-  pid not null references agents(pid),
+  pid not null references actors(pid), --Originally a spelling error, said: "agents(pid)"
   mid not null references movies(mid)
 );
 
